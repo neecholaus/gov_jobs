@@ -1,6 +1,8 @@
 const e = require('express');
 const eh = require('express-handlebars');
 
+const PORT = process.env.PORT;
+
 var app = e();
 
 console.log('Starting server...');
@@ -12,4 +14,4 @@ app.get('/', function(request, response) {
 	response.render('home');
 });
 
-app.listen(8000);
+app.listen(PORT || 8000);
