@@ -1,3 +1,7 @@
+body {
+	background: #f3f3f3;
+}
+
 #main-search-con {
 	width: 100%;
 	max-width: 500px;
@@ -30,3 +34,47 @@
 	outline: none;
 	box-shadow: none;
 }
+
+
+
+#results-con {
+	padding: 0;
+}
+
+#results {
+	padding: 0;
+	list-style-type: none;
+}
+
+#results a {
+	text-decoration: none;
+}
+
+.result {
+	padding: 30px;
+	transition: all ease 0.4s;
+}
+.result:hover {
+	background: #e3e3e3;
+	transition: all ease 0s;
+}
+
+.result-title {
+	color: #474747;
+	margin: 0;
+}
+
+.result-subtitle {
+	font-size: 14px;
+	margin: 0;
+}
+
+.result-salary {
+	font-size: 14px;
+	color: #93d16c;
+}
+
+
+
+
+

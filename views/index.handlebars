@@ -1,13 +1,30 @@
 <link rel="stylesheet" type="text/css" href="public/css/index.css" />
 
 <div class="container-fluid bg-warning text-white p-5">
-	<h1>Gov Jobs</h1>
-	<h5>Find your next job with the US Government.</h5>
-
-	<div id="main-search-con" class="text-center">
+	<div id="main-search-con">
+		<h1>Gov Jobs</h1>
+		<h5 class="mb-4">Find your next job with the US Government.</h5>
 		<input type="text" id="main-search-input" class="form-control" placeholder="Enter your ideal position..." />
 		<button type="button" id="main-search-submit" class="btn btn-primary">Search</button>
 	</div>
+</div>
+
+<div class="container-fluid" id="results-con">
+	<ul id="results">
+		<div v-if="results.length > 1">
+			<a v-for="result in results" v-bind:href="result.url">
+				<li class="result">
+					<h5 class="result-title">\{{ result.position_title }}</h5>
+					<p class="result-subtitle text-muted">\{{ result.organization_name }} - \{{ result.locations[0] }}</p>
+
+					<p class="result-salary mt-3 mb-0">$\{{ result.minimum }} - $\{{ result.maximum }}</p>
+				</li>
+			</a>
+		</div>
+		<div v-else>
+			<p class="text-muted">No Resuts</p>
+		</div>
+	</ul>	
 </div>
 
 <script src="public/js/index.js"></script>
