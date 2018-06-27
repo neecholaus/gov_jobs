@@ -1,0 +1,32 @@
+#main-search-con {
+	width: 100%;
+	max-width: 500px;
+	margin: 40px auto;
+}
+
+
+#main-search-input {
+	height: 38px;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	background: white;
+}
+#main-search-input:hover {
+	background: #f3f3f3;
+}
+#main-search-input:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+
+#main-search-submit {
+	height: 38px;
+	width: 100%	;
+	border-radius: 0;
+}
+#main-search-submit:focus {
+	outline: none;
+	box-shadow: none;
+}
