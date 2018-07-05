@@ -15,6 +15,7 @@ body {
 	border: none;
 	border-radius: 0;
 	background: white;
+	font-size: 18px;
 }
 #main-search-input:hover {
 	background: #f3f3f3;
@@ -29,6 +30,8 @@ body {
 	height: 38px;
 	width: 100%	;
 	border-radius: 0;
+	font-weight: bold;
+	letter-spacing: 1px;
 }
 #main-search-submit:focus {
 	outline: none;
@@ -73,8 +76,3 @@ body {
 	font-size: 14px;
 	color: #93d16c;
 }
-
-
-
-
-

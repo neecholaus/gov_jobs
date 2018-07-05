@@ -4,14 +4,14 @@
 	<div id="main-search-con">
 		<h1>Gov Jobs</h1>
 		<h5 class="mb-4">Find your next job with the US Government.</h5>
-		<input type="text" id="main-search-input" class="form-control" placeholder="Enter your ideal position..." />
+		<input type="text" id="main-search-input" class="form-control" placeholder="Enter your ideal position . . ." />
 		<button type="button" id="main-search-submit" class="btn btn-primary">Search</button>
 	</div>
 </div>
 
 <div class="container-fluid" id="results-con">
 	<ul id="results">
-		<div v-if="results.length > 1">
+		<div v-if="results.length > 0">
 			<a v-for="result in results" v-bind:href="result.url">
 				<li class="result">
 					<h5 class="result-title">\{{ result.position_title }}</h5>
@@ -22,9 +22,14 @@
 			</a>
 		</div>
 		<div class="text-center p-5" v-else>
-			<h4 class="text-muted">No Results</h4>
+			<div v-if="errors.length > 0">
+				<h4 v-for="error in errors" class="text-muted">\{{ error }}</h4>
+			</div>
+			<div v-else>
+				<h4 class="text-muted">No Results</h4>
+			</div>
 		</div>
-	</ul>	
+	</ul>
 </div>
 
 <script src="public/js/index.js"></script>
